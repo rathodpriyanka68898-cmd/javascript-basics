@@ -9,6 +9,7 @@ let accountState;
 accountEmail = "priya@rathod.com"
 accountPassword = "6362588"
 accountCity = "banglore"
+accountname = "sbi"
 
 console.log(accountId);
 
