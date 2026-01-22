@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#6b6b6b,#0b0b0b);
+    overflow:hidden;
+    color:#fff;
+}
+
+/* ❄️ Snow Particles */
+.snow{
+    position:absolute;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 80% 40%, #fff, transparent),
+        radial-gradient(1px 1px at 60% 80%, #fff, transparent),
+        radial-gradient(2px 2px at 30% 70%, #fff, transparent),
+        radial-gradient(1px 1px at 90% 10%, #fff, transparent);
+    background-size:300px 300px;
+    animation:snowMove 25s linear infinite;
+    opacity:0.6;
+}
+
+@keyframes snowMove{
+    from{background-position:0 0;}
+    to{background-position:300px 600px;}
+}
+
+/* Card */
+.card{
+    width:380px;
+    background:linear-gradient(180deg,#1a1a1a,#0a0a0a);
+    border-radius:26px;
+    padding:22px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.7);
+    position:relative;
+    z-index:1;
+}
+
+/* Profile */
+.profile{
+    text-align:center;
+}
+
+.profile img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:12px;
+}
+
+.profile h2{
+    font-size:22px;
+    font-weight:600;
+}
+
+.profile .role{
+    font-size:14px;
+    opacity:.85;
+}
+
+.profile .company{
+    margin-top:6px;
+    font-size:15px;
+    opacity:.9;
+}
+
+/* Icons */
+.icons{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 10px;
+}
+
+.icons a{
+    width:48px;
+    height:48px;
+    background:#fff;
+    color:#000;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    text-decoration:none;
+}
+
+/* Tagline */
+.tagline{
+    font-size:13px;
+    text-align:center;
+    opacity:.85;
+    margin-bottom:14px;
+}
+
+/* About */
+.about{
+    background:#141414;
+    border-radius:18px;
+    padding:16px;
+}
+
+.about h3{
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.about p{
+    font-size:13.5px;
+    line-height:1.6;
+    opacity:.9;
+}
+
+/* Actions */
+.actions{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+}
+
+.actions button{
+    border:none;
+    border-radius:24px;
+    padding:10px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.icon-btn{
+    width:44px;
+    background:#1a1a1a;
+    color:#fff;
+}
+
+.add-btn{
+    flex:1;
+    background:#fff;
+    color:#000;
+    font-weight:500;
+}
+</style>
+</head>
+
+<body>
+
+<div class="snow"></div>
+
+<div class="card">
+    <div class="profile">
+        <img src="itsme.jpeg" alt="profile">
+        <h2>Priyanka Rathod</h2>
+        <div class="role">Full stack developer</div>
+        <div class="company">Alvas institution and technology</div>
+    </div>
+
+    <div class="icons">
+        <a href="tel:+918088974865"><i class="fa-solid fa-phone"></i></a>
+        <a href="mailto:rathodpriyanka68898@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/rathodpriyanka68898-cmd"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/priyanka-rathod-14838b38b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+
+    <div class="tagline">
+        Web Developer | full stack developer | Continuous Learner
+    </div>
+
+    <div class="about">
+        <h3>About Me</h3>
+        <p>
+            Hi, I am <b>Priyanka Rathod</b> a first-year Computer Science Engineering (CSE)
+         student with a strong interest in web development and programming. I am currently 
+         learning HTML, CSS, JavaScript, and improving my Python skills to build interactive 
+         and user-friendly applications.
+        </p>
+    </div>
+
+    <div class="actions">
+        <button class="icon-btn"><i class="fa-solid fa-qrcode"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-share-nodes"></i></button>
+        <button class="add-btn">Add to Contact +</button>
+    </div>
+</div>
+
+</body>
+</html>
+
+
