@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Event </title>
+</head>
+<body style="background-color: white;color: black;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="imsges">
+            <ul id="images">
+         <li><img width="200px" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg" alt="photoshop"></li>
+         <li><img width="200px" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg" alt="japan"></li>
+         <li><img width="200px" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg" alt="river"></li>
+         <li><img width="200px" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg" alt="owl"></li>
+         <li><img width="200px" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg" alt="prayer"></li>
+</ul>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //    alter("owl clicked")
+    // }
+    // attachEvent()
+    // jQuery - on
+
+     // type, timestamp, defaultPrevented
+    // target, toElement, sceElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey,ctrlkey, shiftkey, keycode
+
+    //document.getElementById('images').addEventListener('click', function(){
+    //    console.log("clicked inside the ul");
+    //  }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(){
+    // console.log("owl clicked");
+    //    e.stopPropagation()
+    // }, false)
+
+    //document.getElementById('google').addEventListener
+    // ('click',function(){
+    //    e.preventDefault();
+    //    e.stopPropagation()
+    //    console.log("google clicked");
+   // }, false)
+
+   document.querySelector('#images').addEventListener
+   ('click', function(e){
+        console.log(e.target.tagname);
+        if (e.target.tagname === 'IMG'); {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+            
+    })
+
+    //removeIt.parentNode.removeChild(removeIt)
+    
+</script>
+</html>
